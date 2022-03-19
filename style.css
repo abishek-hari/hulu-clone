@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+.header {
+  height: 560px;
+  background: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+    url("images/movie1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.header nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+}
+.header .btn {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.header .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 8%;
+}
+.header-content .start {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: rgb(6, 253, 130);
+}
+.header-content .logo {
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgb(6, 253, 130);
+}
+.header-content .header-text-1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+.btn-1 {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 20px 35px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-top: 2.3%;
+}
+.btn-dark {
+  background: #000;
+  color: #fff;
+}
+.sign {
+  padding-top: 1.8%;
+  text-decoration: underline;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 4%;
+}
+.plans h4 {
+  color: rgb(6, 253, 130);
+}
+.plans .text-xl {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.plans .text-sm {
+  font-size: 1.3rem;
+  text-align: center;
+  padding-top: 2%;
+}
+.categories .covers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 20px 0 20px;
+}
+.covers > div {
+  height: 400px;
+  width: 250px;
+  position: relative;
+}
+.cover-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.covers .cover-1 {
+  background: url(images/movie1.jpg) no-repeat center center / cover;
+}
+.covers .cover-2 {
+  background: url(images/movie2.jpg) no-repeat center center / cover;
+}
+.covers .cover-3 {
+  background: url(images/movie3.jpg) no-repeat center center / cover;
+}
+.covers .cover-4 {
+  background: url(images/movie4.jpg) no-repeat center center / cover;
+}
+
+.live-border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 4px solid #1ce783;
+  border-radius: 10px;
+  padding: 40px;
+}
+.live {
+  padding: 10% 40px 40px;
+}
+.live h4 {
+  color: rgb(6, 253, 130);
+}
+.live .text-xl {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.live .text-sm {
+  font-size: 1.4rem;
+  text-align: center;
+  padding-top: 2%;
+}
+.live .text-osm {
+  font-size: 1rem;
+  padding-top: 1%;
+}
+
+.live-sports {
+  background: url(images/movie3.jpg) no-repeat center center / cover;
+  height: 480px;
+  position: relative;
+}
+.sports-content {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+}
+.sports-content .text-xl {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.sports-content .text-sm {
+  font-size: 1.4rem;
+}
+.sports-content .text-osm {
+  font-size: 1rem;
+}
+.footer {
+  background: #ebedf2;
+  color: #333;
+}
+.footer a {
+  color: #333;
+}
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
+.footer-lists {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-lists .list-heading {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.footer .divider {
+  width: 100%;
+  height: 4px;
+  border-top: 1px #777 solid;
+  margin: 30px 0;
+}
+.social-icons a {
+  margin-right: 10px;
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-box {
+  margin: 10% auto;
+  width: 360px;
+  position: relative;
+  background: #fff;
+  color: #333;
+  animation: modalopen 1s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-body {
+  padding: 50px;
+}
+
+.modal-body h3 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-align: center;
+  padding-bottom: 5%;
+}
+.modal-body .btn-1 {
+  width: 100%;
+  margin-top: 20px;
+}
+.modal .close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal .close i {
+  font-size: 2rem;
+}
+.modal .modal-footer {
+  padding: 20px 0;
+  text-align: center;
+}
+.modal .modal-footer a {
+  color: steelblue;
+}
+
+/* form */
+.form-control {
+  margin: 15px 0;
+}
+.form-control label {
+  display: block;
+  text-transform: uppercase;
+}
+.form-control input {
+  width: 100%;
+  border: 2px #ccc solid;
+  border-radius: 5px;
+  padding: 5px;
+  height: 50px;
+}
+
+/* media */
+@media (max-width: 1100px) {
+  .categories .covers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 780px) {
+  .header {
+    height: 480px;
+  }
+  .header-content {
+    text-align: center;
+    padding: 0 20px;
+  }
+  .header-content .logo {
+    font-size: 4rem;
+  }
+  .header-content .start {
+    font-size: 0.5rem;
+    font-weight: 600;
+  }
+  .header-content .header-text-1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .btn-1 {
+    padding: 10px 20px;
+    margin-top: 3%;
+  }
+  .plans .text-xl {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .categories {
+    padding-top: 0;
+  }
+  .plans .text-sm {
+    font-size: 1.2rem;
+  }
+  .live .text-xl {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .live .text-sm {
+    font-size: 16px;
+    text-align: center;
+  }
+  .live .text-osm {
+    font-size: 10px;
+    padding-top: 2%;
+  }
+  .live-border {
+    padding: 10px;
+  }
+  .live {
+    padding: 10% 20px 20px;
+  }
+  .live-border .sign {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .sports-content {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+  }
+  .live-sports {
+    height: 350px;
+  }
+  .sports-content .text-xl {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .sports-content .text-sm {
+    font-size: 1rem;
+    padding-top: 2%;
+  }
+  .sports-content .text-osm {
+    font-size: 0.6rem;
+    padding-top: 1%;
+  }
+  .footer-lists {
+    flex-direction: column;
+  }
+  .modal-box {
+    width: 290px;
+  }
+  .modal-body .btn-1 {
+    margin-top: 5px;
+  }
+  .form-control {
+    margin: 5px 0;
+  }
+}
+@media (max-width: 600px) {
+  .categories .covers {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
